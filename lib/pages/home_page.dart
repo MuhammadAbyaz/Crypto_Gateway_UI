@@ -1,6 +1,8 @@
 import 'package:crypto_gateway/colors/colors.dart';
 import 'package:flutter/material.dart';
 
+import '../widgets/inkwell_container.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -17,7 +19,7 @@ class _HomePageState extends State<HomePage> {
         centerTitle: false,
         backgroundColor: secondaryColor,
       ),
-      body: Column(
+      body: const Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -25,98 +27,28 @@ class _HomePageState extends State<HomePage> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Container(
-                height: 100,
-                width: 100,
-                decoration: const BoxDecoration(
-                  color: primaryColor,
-                  boxShadow: [
-                    BoxShadow(
-                      blurRadius: 5.0,
-                      color: Colors.grey
-                    )
-                  ],
-                  borderRadius: BorderRadius.all(Radius.circular(23)),
-                ),
-                child: const Padding(
-                    padding: EdgeInsets.all(20),
-                    child: Image(
-                      image: AssetImage("images/bitcoin.png"),
-                    )),
+              InkWellContainer(
+                iconAddress: "images/bitcoin.png",
               ),
-              InkWell(
-                child: Container(
-                  height: 100,
-                  width: 100,
-                  decoration: const BoxDecoration(
-                    color: primaryColor,
-                    boxShadow: [
-                      BoxShadow(
-                        blurRadius: 5.0,
-                        color: Colors.grey
-                      )
-                    ],
-                    borderRadius: BorderRadius.all(Radius.circular(23)),
-                  ),
-                  child: const Padding(
-                      padding: EdgeInsets.all(20),
-                      child: Image(
-                        image: AssetImage("images/ethereum.png"),
-                      )),
-                ),
-              )
+              InkWellContainer(
+                iconAddress: "images/ethereum.png",
+              ),
             ],
           ),
-          const SizedBox(
-            height: 40,
-            width: 40,
+          SizedBox(
+            height: 120,
+            width: double.infinity,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              InkWell(
-                child: Container(
-                  height: 100,
-                  width: 100,
-                  decoration: const BoxDecoration(
-                    color: primaryColor,
-                    boxShadow: [
-                      BoxShadow(
-                        blurRadius: 5.0,
-                        color: Colors.grey
-                      )
-                    ],
-                    borderRadius: BorderRadius.all(Radius.circular(23)),
-                  ),
-                  child: const Padding(
-                      padding: EdgeInsets.all(20),
-                      child: Image(
-                        image: AssetImage("images/dodge_coin.png"),
-                      )),
-                ),
+              InkWellContainer(
+                iconAddress: "images/dodge_coin.png",
               ),
-              InkWell(
-                child: Container(
-                  height: 100,
-                  width: 100,
-                  decoration: const BoxDecoration(
-                    color: primaryColor,
-                    boxShadow: [
-                      BoxShadow(
-                        blurRadius: 5.0,
-                        color: Colors.grey
-                      )
-                    ],
-                    borderRadius: BorderRadius.all(Radius.circular(23)),
-                  ),
-                  child: const Padding(
-                      padding: EdgeInsets.all(20),
-                      child: Image(
-                        image: AssetImage("images/binance_coin.png"),
-                      )),
-                ),
-              )
+              InkWellContainer(
+                iconAddress: "images/binance_coin.png",
+              ),
             ],
           )
         ],

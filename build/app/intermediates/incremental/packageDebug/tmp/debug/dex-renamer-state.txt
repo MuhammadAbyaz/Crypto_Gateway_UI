@@ -1,4 +1,4 @@
-#Fri Aug 11 21:49:55 PKT 2023
+#Tue Aug 15 23:23:04 PKT 2023
 base.0=/home/abyaz/Workspace/Projects/crypto_gateway/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

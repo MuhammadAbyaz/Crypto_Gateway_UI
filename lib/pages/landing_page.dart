@@ -21,7 +21,11 @@ class _LandingPageState extends State<LandingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage("images/background.jpg"), fit: BoxFit.fill),
+        ),
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
           child: Column(
@@ -31,13 +35,17 @@ class _LandingPageState extends State<LandingPage> {
                 width: 24,
                 height: 24,
               ),
-              const Text(
-                "Enter the Crypto World",
-                style: TextStyle(
-                    fontSize: 75,
-                    letterSpacing: 2,
-                    fontFamily: "Inter",
-                    fontWeight: FontWeight.w500),
+              const Padding(
+                padding: EdgeInsets.fromLTRB(30, 30, 30, 30),
+                child: Text(
+                  "Enter the Crypto World",
+                  style: TextStyle(
+                      color: tertiaryColor,
+                      fontSize: 75,
+                      letterSpacing: 2,
+                      fontFamily: "Inter",
+                      fontWeight: FontWeight.w500),
+                ),
               ),
               const SizedBox(
                 height: 20,
@@ -45,6 +53,7 @@ class _LandingPageState extends State<LandingPage> {
               const Text(
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean imperdiet consectetur sapien, in tempus urna accumsan quis. Proin ac est nunc.",
                 style: TextStyle(
+                    color: tertiaryColor,
                     fontSize: 18,
                     fontFamily: "Inter",
                     fontWeight: FontWeight.normal),
